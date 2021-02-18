@@ -1,20 +1,20 @@
-import React from "react";
-import "antd/dist/antd.css";
-import { Row, Col, Typography, Card, Form, Button, Divider, Input } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import React from 'react';
+import { Row, Col, Typography, Card, Form, Button, Divider, Input } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import useLoginForm from '../hooks/useLoginForm';
 
-export default function App() {
+function LoginForm() {
   const [form] = Form.useForm();
-  const [isLoading, setIsLoading] = React.useState(false);
+  const { isLoading, login } = useLoginForm();
 
   return (
-    <>
-      <Row justify="center" style={{ marginTop: "3%", marginBottom: "2%" }}>
+    <div style={{ backgroundColor: 'ghostwhite', height: '100%' }}>
+      <Row justify="center" style={{ paddingTop: "3%", marginBottom: "2%" }}>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Magnavox_Odyssey_Logo.svg/1920px-Magnavox_Odyssey_Logo.svg.png"
-          alt="header-log"
-          width="600"
-          style={{ padding: "20px" }}
+          src='logo.png'
+          alt='header-logo'
+          width='600'
+          style={{ padding: '20px' }}
         />
       </Row>
       <Row>
@@ -24,7 +24,7 @@ export default function App() {
             <Typography.Paragraph className="text-muted">
               Sign in to your account
             </Typography.Paragraph>
-            <Form form={form} layout="vertical" onFinish={() => {}}>
+            <Form form={form} layout="vertical" onFinish={login}>
               <Form.Item
                 name="email"
                 label={<b>Email Address</b>}
@@ -74,6 +74,8 @@ export default function App() {
           </Card>
         </Col>
       </Row>
-    </>
+    </div>
   );
 }
+
+export default LoginForm;
