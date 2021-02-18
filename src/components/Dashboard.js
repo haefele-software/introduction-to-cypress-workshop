@@ -16,7 +16,7 @@ export default function Dashboard() {
         />
       </Row>
       <Row justify='center'>
-        <Typography.Title>You have successfully logged in.</Typography.Title>
+        <Typography.Title>The Dashboard</Typography.Title>
       </Row>
       <Row justify='center'>
         <Col span={3}>
