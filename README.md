@@ -11,3 +11,4 @@
 - Learn how to add Cypress to a project
 - Learn how to write test specs using Cypress
 - Learn how to run our test suite with Cypress
+- Understand the Cypress Cloud
