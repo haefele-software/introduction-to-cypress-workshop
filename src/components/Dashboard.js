@@ -20,7 +20,7 @@ export default function Dashboard() {
       </Row>
       <Row justify='center'>
         <Col span={3}>
-          <Button loading={isLoading} block onClick={logout}>Logout</Button>
+          <Button loading={isLoading} block onClick={logout} data-cy='logout-button'>Logout</Button>
         </Col>
       </Row>
     </div>
