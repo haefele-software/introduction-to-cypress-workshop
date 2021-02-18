@@ -20,7 +20,7 @@ function LoginForm() {
       <Row>
         <Col span={12} offset={6}>
           <Card>
-            <Typography.Title>Login</Typography.Title>
+            <Typography.Title data-cy='login-title'>Login</Typography.Title>
             <Typography.Paragraph className="text-muted">
               Sign in to your account
             </Typography.Paragraph>
@@ -44,6 +44,8 @@ function LoginForm() {
                   type="text"
                   placeholder="Enter your email address"
                   disabled={isLoading}
+                  id="login-email-input"
+                  data-cy="email-input"
                 />
               </Form.Item>
               <Form.Item
@@ -57,6 +59,7 @@ function LoginForm() {
                   prefix={<LockOutlined />}
                   placeholder="Password"
                   disabled={isLoading}
+                  data-cy="password-input"
                 />
               </Form.Item>
               <Divider />
@@ -66,6 +69,7 @@ function LoginForm() {
                   loading={isLoading}
                   type="primary"
                   htmlType="submit"
+                  data-cy="submit-button"
                 >
                   Login
                 </Button>
